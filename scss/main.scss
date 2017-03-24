@@ -1,0 +1,89 @@
+body {
+  background: url('../img/background-gray.jpg') 50% 0 #C1C1C1;
+}
+
+#top {
+  position: relative;
+}
+
+#banner {
+  float: none;
+  margin: 0 auto rem-calc(50);
+
+  @include breakpoint(small only) {
+    @include grid-col-collapse;
+    margin-bottom: rem-calc(25);
+  }
+}
+
+#vid-container {
+  margin: 0 0 rem-calc(-50) 0;
+
+  @include breakpoint(medium up) {
+    margin-left: rem-calc(25);
+  };
+
+  img {
+    box-shadow: 3px 6px 11px #333;
+  }
+}
+
+.portrait-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#portrait {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+
+  @include breakpoint(small only) {
+    right: -10%;
+  }
+}
+
+#signup {
+  background: #000;
+  color: #fff;
+  min-height: 16rem;
+  padding: 5rem 0 2rem;
+
+  @include breakpoint(medium up) {
+    padding-top: 6rem;
+  }
+
+  h3 {
+    margin-bottom: 1.785rem;
+    text-align: center;
+    color: #FFFF00;
+  }
+
+  input[type="text"] {
+    padding: 1.5rem;
+  }
+
+  button {
+    background: #000;
+    border: 4px solid #FFFF00;
+    padding: 1rem rem-calc(44);
+    margin-top: 1rem;
+    color: #FFFF00;
+    
+    &:hover {
+      background: #FFFF00;
+      color: #000;
+    }
+  }
+
+  p {
+    color: #828282;
+    font-size: .9rem;
+    text-align: center;
+  }
+}
